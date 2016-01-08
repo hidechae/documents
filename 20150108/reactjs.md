@@ -71,8 +71,6 @@ ReactDOM.render(
 ##### with jsx + es6
 - https://jsfiddle.net/hidechae/2Lyaaatm/
 
-es6: https://babeljs.io/docs/learn-es2015/
-
 ```javascript
 class Hello extends React.Component {
   render() {
@@ -87,6 +85,17 @@ React.render(
   document.getElementById('app')
 );
 ```
+
+es6とは
+
+- https://babeljs.io/docs/learn-es2015/
+- 追加機能
+  - クラス (`class`, `extends`, `super`)
+  - アロー関数 (`(x, y) => { ... }`)
+  - ブロックスコープの変数 (`let`)、定数 (`const`)
+  - テンプレートリテラル (`${x} + ${y} = ${x + y}`)
+  - etc...
+
 
 <a id="component">
 
