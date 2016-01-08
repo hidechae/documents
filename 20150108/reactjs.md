@@ -1,12 +1,19 @@
 
-- [はじめに](#introduction)
+- [React.jsとは](#introduction)
 - [Hello World](#hello_world)
 
-React.js入門
 
 <a id="introduction">
 
-# はじめに
+# React.jsとは
+
+- Facebook製
+- コンポーネント志向
+- 仮想DOM
+- JSX
+- 2way bindingではない
+
+### トレンド
 
 ![image](https://cloud.githubusercontent.com/assets/1647252/12188691/114f7ece-b5fb-11e5-930c-da529cbfc2bf.png)
 
@@ -106,9 +113,27 @@ render () {
 }
 ```
 
-# StateとProps
+- `{ }` で囲ってJavscriptのコードを呼び出す
 
-https://jsfiddle.net/hidechae/k9ghevzd/
+```javascript
+render() {
+  return (
+    <div>Hello {this.props.name}</div>
+  );
+}
+```
+
+- 閉じタグが無いタグは `/>` で終わらないといけない
+
+```javascript
+render() {
+  return (
+    <input type='text' />
+  );
+}
+```
+
+# StateとProps
 
 ## State
 
@@ -140,6 +165,9 @@ React.createClass({
   }
 })
 ```
+
+example: https://jsfiddle.net/hidechae/k9ghevzd/
+
 
 # Component間でやり取りする
 https://jsfiddle.net/hidechae/p7kyjtwx/
