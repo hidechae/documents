@@ -1,6 +1,11 @@
 
 - [React.jsとは](#introduction)
 - [Hello World](#hello_world)
+- [Component](#component)
+- [StateとProps](#state_props)
+- [ComponentのLifecycle](#component_lifecycle)
+- [Libraries](#liberaries)
+- [その他のフレームワーク](#other_framework)
 
 
 <a id="introduction">
@@ -24,7 +29,6 @@
 
 
 ```html
-# html
 <body>
   <div id="app"></div>
 </body>
@@ -84,6 +88,7 @@ React.render(
 );
 ```
 
+<a id="component">
 
 # Component
 
@@ -133,6 +138,8 @@ render() {
 }
 ```
 
+<a id="state_props">
+
 # StateとProps
 
 ## State
@@ -166,17 +173,49 @@ React.createClass({
 })
 ```
 
-example: https://jsfiddle.net/hidechae/k9ghevzd/
 
 
-# Component間でやり取りする
-https://jsfiddle.net/hidechae/p7kyjtwx/
+## Component間でやり取りする
+
+simpleな例
+
+- https://jsfiddle.net/hidechae/k9ghevzd/
+
+ちょっと複雑な例
+
+- https://jsfiddle.net/hidechae/p7kyjtwx/
+
+<a id="component_lifecycle">
+
+# ComponentのLifecycle
+
+### componentWillMount()
+- ComponentがDOMツリーに追加される前に呼ばれる
+- Constructorみたいに初期化処理に使う
+
+### componentDidMount()
+- componentがDOMツリーに追加された後に呼ばれる
+
+### componentWillReceiveProps(nextProps)
+- Propsが更新されるときに呼ばれる
+- Propsの値に応じて変数の値を変えたい場合などに使う
+
+### shouldComponentUpdate()
+- Componentがrenderされる前に呼ばれる
+- boolを返し、falseを返すとrenderされない
+
+### componentWillUpdate(nextProps, nextState)
+- Componentが更新される前に呼ばれる
+
+### componentDidUpdate(prevProps, prevState)
+- Componentが更新された後に呼ばれる
+
+### componentWillUnmount()
+- ComponentがDOMから削除されるときに呼ばれる
+- destructorみたいにクリーンアップ系の処理をする
 
 
-## Lifecycle
-
-- componentDidMount
-
+<a id="liberaries">
 
 # Libraries
 
@@ -190,9 +229,16 @@ https://jsfiddle.net/hidechae/p7kyjtwx/
   - http://react-components.com/
 
 
+<a id="other_framework">
+
 # その他のフレームワーク
 
 - Angular.js
-- Mithril.js
+  - v1: https://angularjs.org/
+  - v2: https://angular.io/
 - Vue.js
+  - http://jp.vuejs.org/
+- Mithril.js
+  - http://mithril.js.org/
 - Riot.js
+  - http://riotjs.com/ja/
