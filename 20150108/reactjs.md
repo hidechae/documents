@@ -1,9 +1,22 @@
+
+- [はじめに](#introduction)
+- [Hello World](#hello_world)
+
 React.js入門
+
+<a id="introduction">
+
+# はじめに
+
+![image](https://cloud.githubusercontent.com/assets/1647252/12188691/114f7ece-b5fb-11e5-930c-da529cbfc2bf.png)
+
+
+<a id="hello_world">
 
 # Hello World
 
 
-```
+```html
 # html
 <body>
   <div id="app"></div>
@@ -13,7 +26,7 @@ React.js入門
 ##### with jsx
 - https://jsfiddle.net/hidechae/z7hqj0k2/
 
-```
+```javascript
 var Hello = React.createClass({
   render: function() {
     return (
@@ -31,7 +44,7 @@ ReactDOM.render(
 ##### without jsx
 - https://jsfiddle.net/hidechae/zfv1f458/
 
-```
+```javascript
 var Hello = React.createClass({
   render: function() {
     return React.DOM.div({className: 'container'}, 'Hello ' + this.props.name);
@@ -49,7 +62,7 @@ ReactDOM.render(
 
 es6: https://babeljs.io/docs/learn-es2015/
 
-```
+```javascript
 class Hello extends React.Component {
   render() {
     return (
@@ -73,7 +86,7 @@ React.render(
 
 - renderではcomponentを1つだけ返す
 
-```
+```javascript
 // NG
 render() {
   return (
@@ -115,7 +128,7 @@ https://jsfiddle.net/hidechae/k9ghevzd/
 
 https://facebook.github.io/react/docs/reusable-components.html
 
-```
+```javascript
 React.createClass({
   propTypes: {
     optionalArray:  React.PropTypes.array,
